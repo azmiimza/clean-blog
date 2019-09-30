@@ -1,0 +1,10 @@
+ <li>
+
+     <%= link_to user.name, user %>
+   
+     |    <%= link_to "edit", edit_user_path(user.id)%>
+     <%= link_to " delete", user, method: :delete,
+                                   data: { confirm: "You sure?" } %>
+   
+
+ </li>
