@@ -100,6 +100,8 @@ GEM
     debug_inspector (0.0.3)
     erubi (1.8.0)
     execjs (2.7.0)
+    faker (2.4.0)
+      i18n (~> 1.6.0)
     ffi (1.11.1)
     font-awesome-rails (4.7.0.5)
       railties (>= 3.2, < 6.1)
@@ -247,6 +249,7 @@ DEPENDENCIES
   byebug
   capybara (>= 2.15)
   carrierwave
+  faker
   font-awesome-rails
   jbuilder (~> 2.7)
   listen (>= 3.0.5, < 3.2)

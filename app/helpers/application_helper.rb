@@ -10,4 +10,12 @@ module ApplicationHelper
         end
     end
 
+    def check_user(user)
+        if current_user.present?
+            current_user.admin? || current_user?(user)
+        else
+            false
+        end
+    end
+
 end

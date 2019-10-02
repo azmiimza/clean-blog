@@ -1,6 +1,8 @@
  <li>
      <%= link_to user.name, user %>
+    
      <%= link_to "edit", edit_user_path(user.id), class: "btn btn-primary"%>
-     <%= link_to " delete", user, method: :delete,
+     <%= link_to "delete", user, method: :delete,
                                    data: { confirm: "You sure?" },  class: "btn btn-danger"%>
+   
  </li>

@@ -11,10 +11,18 @@
         <%= blog_post.content%>
     </p>
 
+    <p>
+        Tag: <%= blog_post.tag_list%>
+    </p>
+
     <p class="post-meta">
         Posted by <%= blog_post.user.name %> , <%= time_ago_in_words(blog_post.created_at) %> ago.
     </p>
 
+    
+     
+    <% if check_user(blog_post.user) %>
     <%= link_to "Edit", edit_blog_post_path(blog_post.id), class: "btn btn-primary"%>
     <%= link_to " Delete", blog_post, data: { confirm: "You sure?" }, method: :delete,  class: "btn btn-danger"%>
+    <% end %>
     <hr>

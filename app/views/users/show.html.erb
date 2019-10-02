@@ -1,7 +1,7 @@
 <% provide(:title, @user.name) %>
 
 <div class="row">
-  <aside class="col-md-4">
+  <aside class="col-md-12">
     <section class="user_info">
       <h2>
         Name:
@@ -10,6 +10,7 @@
         <%= @user.email %>
       </h2>
     </section>
+    
     <%= link_to "edit", edit_user_path(@user.id), class: "btn btn-primary"%>
     <%= link_to " delete", @user, method: :delete,
                                    data: { confirm: "You sure?" }, class: "btn btn-danger"%>

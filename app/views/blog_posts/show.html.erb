@@ -9,12 +9,15 @@
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
         <%= @blog_post.content %>
+         <p>
+        Tag: <%= @blog_post.tags.name%>
+    </p>
         <hr>
         <p>
           Posted by <%= @blog_post.user.name %> , <%= time_ago_in_words(@blog_post.created_at) %> ago.
         </p>
-        <%= link_to "Edit", edit_blog_post_path(@blog_post.id)%>
-        |<%= link_to " Delete", @blog_post, data: { confirm: "You sure?" }, method: :delete %>
+        <%= link_to "Edit", edit_blog_post_path(@blog_post.id), class: "btn btn-primary"%>
+        <%= link_to " Delete", @blog_post, data: { confirm: "You sure?" }, method: :delete, class: "btn btn-danger" %>
       </div>
     </div>
 

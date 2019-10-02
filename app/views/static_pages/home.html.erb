@@ -7,8 +7,16 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
+            <%= form_tag(home_path , method: :get) do%>
+            <%= text_field_tag :search, params[:search], placeholder: "Search Posts", style: "margin-bottom: 20px"%>
+            <%= submit_tag 'Search', name: nil %>
+            <% end %>
             <div class="post-preview">
-                <%= render @blog_posts %>
+                <% if @blog_posts.present? %>
+                    <%= render @blog_posts %>
+                <% else %>
+                    <p>Keyword Not Found</p>
+                <% end %>
             </div>
             <!-- Pager -->
             <div class="clearfix">
