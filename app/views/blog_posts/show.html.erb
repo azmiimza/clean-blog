@@ -1,0 +1,22 @@
+<% provide :title, @blog_post.title %>
+
+<% provide :header_title, @blog_post.title%>
+<% provide :subheading, @blog_post.summary %>
+
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <%= @blog_post.content %>
+        <hr>
+        <p>
+          Posted by <%= @blog_post.user.name %> , <%= time_ago_in_words(@blog_post.created_at) %> ago.
+        </p>
+        <%= link_to "Edit", edit_blog_post_path(@blog_post.id)%>
+        |<%= link_to " Delete", @blog_post, data: { confirm: "You sure?" }, method: :delete %>
+      </div>
+    </div>
+
+  </div>
+</article>

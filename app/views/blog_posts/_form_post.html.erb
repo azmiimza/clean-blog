@@ -1,0 +1,18 @@
+<%= form_for(@blog_post) do |f| %>
+<%= render 'shared/error_messages', object: f.object %>
+<div class="field">
+    <%= f.label :title%>
+    <%= f.text_field :title, class: 'form-control'%>
+    <%= f.label :summary%>
+    <%= f.text_field :summary, class: 'form-control'%>
+    <%= f.label :user_id%>
+    <%= f.text_field :user_id, class: 'form-control'%>
+    <%= f.label :content%>
+    <%= f.text_area :content, class: 'form-control', placeholder: "Write your article..." %>
+    <%= f.label :imageurl%>
+    <%= f.text_field :title_image_url, class: 'form-control'%>
+
+</div>
+<%= f.submit "Post", class: "btn btn-primary", style: "margin-top: 10px;"%>
+
+<% end %>

@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get '/signup', to: 'users#new'
 
   resources :users
+  resources :blog_posts
 
   root 'static_pages#home'
   

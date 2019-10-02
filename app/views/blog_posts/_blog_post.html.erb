@@ -1,0 +1,20 @@
+
+    <h2 class="post-title">
+        <%= link_to blog_post.title, blog_post %>
+    </h2>
+
+    <h3 class="post-subtitle">
+        <%= blog_post.summary %>
+    </h3>
+
+    <p>
+        <%= blog_post.content%>
+    </p>
+
+    <p class="post-meta">
+        Posted by <%= blog_post.user.name %> , <%= time_ago_in_words(blog_post.created_at) %> ago.
+    </p>
+
+    <%= link_to "Edit", edit_blog_post_path(blog_post.id), class: "btn btn-primary"%>
+    <%= link_to " Delete", blog_post, data: { confirm: "You sure?" }, method: :delete,  class: "btn btn-danger"%>
+    <hr>

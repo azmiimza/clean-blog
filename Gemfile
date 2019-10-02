@@ -32,12 +32,12 @@ gem 'bootsnap', '>= 1.4.2', require: false
 gem "font-awesome-rails"
 gem "pg"
 gem 'pry'
-<<<<<<< HEAD
 gem 'bcrypt'
-=======
 gem 'will_paginate',           '3.1.6'
 gem 'bootstrap-will_paginate', '1.0.0'
->>>>>>> user-pages
+gem 'carrierwave'
+gem 'mini_magick'
+gem 'bootstrap-sass', '3.3.7'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
